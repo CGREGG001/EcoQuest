@@ -1,0 +1,22 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+
+# Rider / VSCode / Visual Studio
+.vscode/
+.idea/
+*.userprefs
+
+# Logs
+*.log
+logs/
+
+# Node (pour plus tard: Husky, tooling)
+node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
