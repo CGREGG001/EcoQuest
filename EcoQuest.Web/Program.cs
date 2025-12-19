@@ -1,9 +1,14 @@
+using EcoQuest.Web.Extensions; // Access the AddEcoQuestServices() extension method
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var app =  builder.Build();
+// Register EcoQuest application services and repositories
+builder.Services.AddEcoQuestServices();
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
