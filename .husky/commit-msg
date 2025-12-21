@@ -1,0 +1,17 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Regex pour Conventional Commits : type(scope?): description
+pattern="^(feat|fix|chore|docs|style|refactor|test|perf|build|ci)(\([a-zA-Z0-9_-]+\))?: .{1,50}"
+
+commit_msg_file=$1
+commit_msg=$(cat "$commit_msg_file")
+
+if ! echo "$commit_msg" | grep -Eq "$pattern"; then
+  echo "✖ Commit message does not follow Conventional Commits format:"
+  echo "  <type>(<scope>): <short description>"
+  echo "Examples:"
+  echo "  feat(auth): add login endpoint"
+  echo "  fix(ui): correct button color"
+  exit 1
+fi
