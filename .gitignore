@@ -27,3 +27,6 @@ docker-compose.override.yml
 
 # Husky
 .husky/_/
+
+# env
+.env

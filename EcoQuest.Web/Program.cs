@@ -1,6 +1,12 @@
+using EcoQuest.Web.Data;
 using EcoQuest.Web.Extensions; // Access the AddEcoQuestServices() extension method
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// load connection strings from env.
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
