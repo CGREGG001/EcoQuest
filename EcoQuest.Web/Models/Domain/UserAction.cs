@@ -1,0 +1,49 @@
+namespace EcoQuest.Web.Models.Domain;
+
+/// <summary>
+/// Represents an action performed by a user, such as recycling,
+/// biking, or reducing energy consumption. Each action stores the
+/// raw value entered by the user and the calculated environmental impact.
+/// </summary>
+public class UserAction
+{
+    /// <summary>
+    /// Primary key of the user action.
+    /// </summary>
+    public int Id { get; set; }
+
+    /// <summary>
+    /// Date when the action was performed.
+    /// </summary>
+    public DateTime Date { get; set; }
+
+    /// <summary>
+    /// Raw value entered by the user (e.g., kilometers, kilograms, liters).
+    /// </summary>
+    public double Value { get; set; }
+
+    /// <summary>
+    /// Environmental impact computed using the action type's impact factor.
+    /// </summary>
+    public double CalculatedImpact { get; set; }
+
+    /// <summary>
+    /// Foreign key referencing the user who performed the action.
+    /// </summary>
+    public string UserId { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Navigation property to the EcoQuest user.
+    /// </summary>
+    public EcoQuestUser User { get; set; } = null!;
+
+    /// <summary>
+    /// Foreign key referencing the type of action performed.
+    /// </summary>
+    public int TypeActionId { get; set; }
+
+    /// <summary>
+    /// Navigation property to the action type definition.
+    /// </summary>
+    public TypeAction TypeAction { get; set; } = null!;
+}
