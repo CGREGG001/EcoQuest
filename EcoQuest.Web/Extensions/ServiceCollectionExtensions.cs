@@ -1,4 +1,5 @@
 using EcoQuest.Web.Data;
+using EcoQuest.Web.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace EcoQuest.Web.Extensions;
@@ -17,7 +18,8 @@ public static class ServiceCollectionExtensions
 
     public static IServiceCollection AddEcoQuestIdentity(this IServiceCollection services)
     {
-        services.AddIdentity<IdentityUser, IdentityRole>()
+        services.AddIdentity<EcoQuestUser
+                , IdentityRole>()
             // Specifies that Identity data (users, roles, claims…) will be stored in ApplicationDbContext via Entity Framework
             .AddEntityFrameworkStores<ApplicationDbContext>()
             // Adds default token providers for security operations like password reset or email confirmation
