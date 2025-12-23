@@ -36,7 +36,7 @@ public class UserObjectiveConfig : IEntityTypeConfiguration<UserObjective>
             .IsRequired();
 
         builder.Property((uo) => uo.ObjectiveAchieved)
-            .HasColumnType("bit")
+            .HasConversion<bool>()
             .IsRequired();
     }
 }
