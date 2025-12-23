@@ -1,5 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-dotnet format EcoQuest.Web/EcoQuest.Web.csproj
-dotnet build EcoQuest.Web/EcoQuest.Web.csproj --no-restore
+dotnet format EcoQuest.sln
+git add .
+dotnet build EcoQuest.sln --no-restore
