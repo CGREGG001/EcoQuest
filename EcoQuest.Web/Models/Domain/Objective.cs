@@ -29,5 +29,7 @@ public class Objective
     /// <summary>
     /// Points awarded when the objective is successfully completed.
     /// </summary>
-    public double PointsReward { get; set; }
+    public int PointsReward { get; set; }
+
+    public ICollection<UserObjective> UserObjectives { get; set; } = new List<UserObjective>();
 }

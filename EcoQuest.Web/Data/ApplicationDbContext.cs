@@ -11,6 +11,12 @@ public class ApplicationDbContext : IdentityDbContext<EcoQuestUser>
         : base(options) { }
 
     public DbSet<TypeAction> TypeActions { get; set; }
+    public DbSet<UserAction> UserActions { get; set; }
+    public DbSet<Badge> Badges { get; set; }
+    public DbSet<UserBadge> UserBadges { get; set; }
+    public DbSet<PointsHistory> PointsHistories { get; set; }
+    public DbSet<Objective> Objectives { get; set; }
+    public DbSet<UserObjective> UserObjectives { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

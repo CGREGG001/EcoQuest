@@ -10,9 +10,11 @@ public class TypeActionConfig : IEntityTypeConfiguration<TypeAction>
     {
         builder.ToTable("TypeActions");
 
-        builder.HasKey(ta => ta.Id);
+        builder.HasKey(ta => ta.Id)
+            .HasName("PK_TypeActions");
 
-        builder.HasIndex(ta => ta.Name).IsUnique();
+        builder.HasIndex(ta => ta.Name)
+            .IsUnique();
 
         builder.Property(ta => ta.Name)
             .IsRequired()
@@ -23,6 +25,7 @@ public class TypeActionConfig : IEntityTypeConfiguration<TypeAction>
             .HasMaxLength(100);
 
         builder.Property(ta => ta.ImpactFactor)
+            .IsRequired()
             .HasColumnType("decimal(5,2)");
     }
 }

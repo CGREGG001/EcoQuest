@@ -25,4 +25,9 @@ public class Badge
     /// Number of points granted when the badge is obtained.
     /// </summary>
     public int PointsAwarded { get; set; }
+
+    /// <summary>
+    /// List of users who have obtained this badge through the UserBadge linking entity.
+    /// </summary>
+    public ICollection<UserBadge> UserBadges { get; set; } = new List<UserBadge>();
 }
