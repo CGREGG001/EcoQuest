@@ -25,7 +25,7 @@ public class PointsHistoryConfig : IEntityTypeConfiguration<PointsHistory>
             .IsRequired();
 
         builder.Property(ph => ph.Date)
-            .HasColumnType("DateTime2")
+            .HasColumnType("timestamp")
             .IsRequired();
     }
 }

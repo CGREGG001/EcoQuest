@@ -28,11 +28,11 @@ public class UserObjectiveConfig : IEntityTypeConfiguration<UserObjective>
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.Property(uo => uo.DateStart)
-            .HasColumnType("datetime2")
+            .HasColumnType("timestamp")
             .IsRequired();
 
         builder.Property(uo => uo.DateEnd)
-            .HasColumnType("datetime2")
+            .HasColumnType("timestamp")
             .IsRequired();
 
         builder.Property((uo) => uo.ObjectiveAchieved)

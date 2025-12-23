@@ -27,7 +27,7 @@ public class UserActionConfig : IEntityTypeConfiguration<UserAction>
 
         builder.Property(ua => ua.Date)
             .IsRequired()
-            .HasColumnType("datetime2");
+            .HasColumnType("timestamp");
 
         builder.Property(ua => ua.Value)
             .HasColumnType("decimal(10,2)");

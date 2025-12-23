@@ -26,7 +26,7 @@ public class UserBadgeConfig : IEntityTypeConfiguration<UserBadge>
             .OnDelete(DeleteBehavior.SetNull);
 
         builder.Property(ub => ub.ObtainAt)
-            .HasColumnType("datetime2")
+            .HasColumnType("timestamp")
             .IsRequired();
     }
 }
