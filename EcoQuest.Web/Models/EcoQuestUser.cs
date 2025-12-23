@@ -27,4 +27,9 @@ public class EcoQuestUser : IdentityUser
     /// List of objectives assigned to the user through the UserObjective linking entity
     /// </summary>
     public ICollection<UserObjective> UserObjectives { get; set; } = new List<UserObjective>();
+
+    /// <summary>
+    /// List of groups assigned to the user through the UserGroup linking entity
+    /// </summary>
+    public ICollection<Group> Groups { get; set; } = new List<Group>();
 }

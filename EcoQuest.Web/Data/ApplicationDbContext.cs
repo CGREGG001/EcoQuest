@@ -17,9 +17,19 @@ public class ApplicationDbContext : IdentityDbContext<EcoQuestUser>
     public DbSet<PointsHistory> PointsHistories { get; set; }
     public DbSet<Objective> Objectives { get; set; }
     public DbSet<UserObjective> UserObjectives { get; set; }
+    public DbSet<Group> Groups { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
+        // Many-to-many relationship between users and groups.
+        // EF Core generates the join table "UserGroups" automatically since no extra attributes are needed.
+        // This keeps the model clean for V1, while allowing an easy transition to a full UserGroup entity in V2.
+        modelBuilder.Entity<EcoQuestUser>()
+            .HasMany(u => u.Groups)
+            .WithMany(g => g.Users)
+            .UsingEntity(join => join.ToTable("UserGroups"));
 
         // EF Core configurations are applied automatically via assembly scanning.
         // Manual registration with ApplyConfiguration(...) is also possible but avoided for scalability.

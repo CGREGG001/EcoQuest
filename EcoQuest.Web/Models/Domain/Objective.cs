@@ -31,5 +31,9 @@ public class Objective
     /// </summary>
     public int PointsReward { get; set; }
 
+    /// <summary>
+    /// Collection of user-specific instances of this objective.
+    /// Each entry represents a user who has started or completed this objective.
+    /// </summary>
     public ICollection<UserObjective> UserObjectives { get; set; } = new List<UserObjective>();
 }

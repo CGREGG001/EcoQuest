@@ -28,7 +28,7 @@ public class Group
     public string InvitationCode { get; set; } = string.Empty;
 
     /// <summary>
-    /// Collection of user-group associations.
+    /// Collection of users associations.
     /// </summary>
-    public ICollection<UserGroup> UserGroups { get; set; } = new List<UserGroup>();
+    public ICollection<EcoQuestUser> Users { get; set; } = new List<EcoQuestUser>();
 }
