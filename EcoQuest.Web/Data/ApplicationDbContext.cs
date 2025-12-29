@@ -1,5 +1,7 @@
 using EcoQuest.Web.Models;
 using EcoQuest.Web.Models.Domain;
+using EcoQuest.Web.Models.Domain.Entities;
+using EcoQuest.Web.Models.Domain.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

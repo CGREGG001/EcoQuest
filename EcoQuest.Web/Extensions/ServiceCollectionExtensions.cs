@@ -1,5 +1,6 @@
 using EcoQuest.Web.Data;
 using EcoQuest.Web.Models;
+using EcoQuest.Web.Models.Domain.Identity;
 using Microsoft.AspNetCore.Identity;
 
 namespace EcoQuest.Web.Extensions;

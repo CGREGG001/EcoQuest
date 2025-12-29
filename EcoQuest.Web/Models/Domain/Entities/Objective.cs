@@ -1,4 +1,4 @@
-namespace EcoQuest.Web.Models.Domain;
+namespace EcoQuest.Web.Models.Domain.Entities;
 
 /// <summary>
 /// Represents an environmental objective a user can work toward,

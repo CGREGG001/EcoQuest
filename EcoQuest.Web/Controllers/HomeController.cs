@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using EcoQuest.Web.Models;
+using EcoQuest.Web.Models.ViewModels;
 
 namespace EcoQuest.Web.Controllers;
 

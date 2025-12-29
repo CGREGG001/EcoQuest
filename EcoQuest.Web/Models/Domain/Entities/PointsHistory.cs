@@ -1,4 +1,4 @@
-namespace EcoQuest.Web.Models.Domain;
+namespace EcoQuest.Web.Models.Domain.Entities;
 
 /// <summary>
 /// Stores a record of points earned by a user, including the origin

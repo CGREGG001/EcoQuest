@@ -1,4 +1,4 @@
-namespace EcoQuest.Web.Models.Domain;
+namespace EcoQuest.Web.Models.Domain.Entities;
 
 /// <summary>
 /// Represents a category of action a user can perform

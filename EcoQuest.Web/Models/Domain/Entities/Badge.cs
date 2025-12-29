@@ -1,4 +1,4 @@
-namespace EcoQuest.Web.Models.Domain;
+namespace EcoQuest.Web.Models.Domain.Entities;
 
 /// <summary>
 /// Represents a badge that can be awarded to users for completing

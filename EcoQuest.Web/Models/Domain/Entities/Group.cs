@@ -1,4 +1,8 @@
-namespace EcoQuest.Web.Models.Domain;
+using EcoQuest.Domain.Enums;
+using EcoQuest.Domain.ValueObjects;
+using EcoQuest.Web.Models.Domain.Identity;
+
+namespace EcoQuest.Web.Models.Domain.Entities;
 
 /// <summary>
 /// Represents a user group within EcoQuest, such as a class,
@@ -20,12 +24,13 @@ public class Group
     /// <summary>
     /// Type of group (e.g., "School", "Company", "Community").
     /// </summary>
-    public string Type { get; set; } = string.Empty;
+    public GroupType Type { get; set; }
 
     /// <summary>
     /// Code used to allow users to join the group.
+    /// Value Object ensuring validation and immutability.
     /// </summary>
-    public string InvitationCode { get; set; } = string.Empty;
+    public InvitationCode InvitationCode { get; set; }
 
     /// <summary>
     /// Collection of users associations.
