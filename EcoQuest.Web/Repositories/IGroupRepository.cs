@@ -22,7 +22,7 @@ public interface IGroupRepository
     /// <summary>
     /// Récupère tous les groupes auxquels appartient un utilisateur.
     /// </summary>
-    Task<IReadOnlyCollection<Group>> GetGroupForUserAsync(UserId userId);
+    Task<IReadOnlyCollection<Group>> GetGroupsForUserAsync(UserId userId);
 
     /// <summary>
     /// Ajoute un nouveau groupe au contexte.
