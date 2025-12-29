@@ -19,7 +19,7 @@ public class GroupRepository : IGroupRepository
         throw new NotImplementedException();
     }
 
-    public Task<IReadOnlyCollection<Group>> GetGroupForUserAsync(UserId userId)
+    public Task<IReadOnlyCollection<Group>> GetGroupsForUserAsync(UserId userId)
     {
         throw new NotImplementedException();
     }
