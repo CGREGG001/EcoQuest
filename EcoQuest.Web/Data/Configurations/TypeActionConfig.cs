@@ -1,4 +1,5 @@
 using EcoQuest.Web.Models.Domain;
+using EcoQuest.Web.Models.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

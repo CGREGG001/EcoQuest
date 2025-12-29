@@ -1,5 +1,6 @@
 using EcoQuest.Domain.ValueObjects;
 using EcoQuest.Web.Models.Domain;
+using EcoQuest.Web.Models.Domain.Entities;
 
 namespace EcoQuest.Web.Repositories;
 

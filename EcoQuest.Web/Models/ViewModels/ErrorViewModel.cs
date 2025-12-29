@@ -1,4 +1,4 @@
-namespace EcoQuest.Web.Models;
+namespace EcoQuest.Web.Models.ViewModels;
 
 public class ErrorViewModel
 {

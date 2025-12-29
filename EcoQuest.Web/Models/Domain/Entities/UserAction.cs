@@ -1,4 +1,6 @@
-namespace EcoQuest.Web.Models.Domain;
+using EcoQuest.Web.Models.Domain.Identity;
+
+namespace EcoQuest.Web.Models.Domain.Entities;
 
 /// <summary>
 /// Represents an action performed by a user, such as recycling,

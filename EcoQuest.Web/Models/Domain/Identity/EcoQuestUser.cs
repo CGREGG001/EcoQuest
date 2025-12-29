@@ -1,7 +1,7 @@
-using EcoQuest.Web.Models.Domain;
+using EcoQuest.Web.Models.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 
-namespace EcoQuest.Web.Models;
+namespace EcoQuest.Web.Models.Domain.Identity;
 
 public class EcoQuestUser : IdentityUser
 {

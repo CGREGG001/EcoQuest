@@ -1,4 +1,6 @@
-namespace EcoQuest.Web.Models.Domain;
+using EcoQuest.Web.Models.Domain.Identity;
+
+namespace EcoQuest.Web.Models.Domain.Entities;
 
 /// <summary>
 /// Represents the association between a user and an objective.
