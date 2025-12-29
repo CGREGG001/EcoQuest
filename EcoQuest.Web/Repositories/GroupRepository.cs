@@ -3,6 +3,10 @@ using EcoQuest.Web.Models.Domain;
 
 namespace EcoQuest.Web.Repositories;
 
+/// <summary>
+/// Implémentation EF Core du repository Group.
+/// Contient uniquement la logique d’accès aux données.
+/// </summary>
 public class GroupRepository : IGroupRepository
 {
     public Task<Group?> GetByIdAsync(int groupId)
